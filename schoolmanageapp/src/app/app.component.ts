@@ -35,15 +35,19 @@ public onOpenModal(student: Student, mode: string): void{
   button.type = 'button';
   button.style.display='none'; 
   button.setAttribute('data-toggle', 'modal');
+  
   if(mode=='add'){
     button.setAttribute('data-target', 'addStudentModal');
   }
+
   if(mode=='edit'){
     button.setAttribute('data-target', '#updateStudentModal');
   }
+
   if(mode=='delete'){
     button.setAttribute('data-target', '#deleteStudentModal');
   }
+
   container?.appendChild(button);
   button.click();
 }
