@@ -6,6 +6,7 @@ import com.micamsof.schoolmanagementsystem.repository.StudentRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.UUID;
 
@@ -36,6 +37,7 @@ public class StudentService {
                 .orElseThrow(() -> new UserNotFoundException("User by id " + id + " was not found"));
     }
 
+    @Transactional
     public void deleteStudent(Long id){
         studentRepo.deleteStudentById(id);
     }
