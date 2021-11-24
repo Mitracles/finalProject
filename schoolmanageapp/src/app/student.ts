@@ -2,9 +2,9 @@ export interface Student{
     id: number;
     name:string;
     email: string;
-    jobTitle: string;
-    phone: string;
+    section: string;
+    contact: string;
     imageUrl: string;
-    studentCode: string;
+    studentNumber: string;
     
 }
