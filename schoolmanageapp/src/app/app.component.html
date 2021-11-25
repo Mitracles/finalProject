@@ -1,27 +1,142 @@
+<style>
+  .container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
 
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}  
+
+div.a {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+   </style>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" style="color:white;"  routerLink="/" rounterLinkActive="active">School Management</a>
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarColor02">
-       <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" routerLink="/teacher" rounterLinkActive="active">Teachers <span class="sr-only">(current)</span></a>
-         </li>
-
-         <li class="nav-item active">
-            <a class="nav-link" routerLink="/student" rounterLinkActive="active">Students <span class="sr-only">(current)</span></a>
-         </li>
-       </ul>
-    </div>
-  </nav>
-  <div style="text-align: center;" >
-  <h2 style="font-family: 'Times New Roman', Times, serif; color: aliceblue;">School Manegement</h2>
+   <a class="w3-bar w3-white w3-wide w3-padding w3-card " style="color:white; font-size: 20px;"  routerLink="/" rounterLinkActive="active">Hybe Academy</a>
+   
+   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+   </button>
+   
+ </nav>
+ <div class="container">
+ <header class="w3-display-container">
+   <img class="w3-image" src="https://image.ajunews.com/content/image/2021/03/19/20210319144522857052.jpg" alt="Hybe Building" width="900" height="600">
+   <div class="w3-display-middle w3-margin-top centered">
+     <h1 class="w3-xxlarge w3-text-white"><span style=" background-color: black; opacity:0.7; " ><b>HYBE </b></span> <span style="background-color: rgb(211, 197, 197); opacity:0.7 ; color: black">Academy</span></h1>
+   </div>
+ </header> 
 </div>
-  <router-outlet>
-   <!--Routed Views go here-->
+ <div class="w3-container w3-padding-32" id="about" style="background-color: white;">
+   <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="padding-top: 50px;padding-right: 30px; padding-left: 80px;">About</h3>
+   <p style="padding-right: 30px; padding-bottom: 50px; padding-left: 80px;">South Korean Music Academt established in 2005 by Bang Si-hyuk as 
+      Big Hit Entertainment Academy. This elite institution operates as a record label, talent agency, music production company, 
+      school management and learning facility, and as a music publishing house. The company has multiple 
+      subsidiaries, including Big Hit Music, Source Music, Pledis Entertainment, Belift Lab, and KOZ Entertainment, 
+      collectively known as Hybe Academy.
+   </p>
+ </div>
+
+ <div style="text-align: center;" >
+ <h2 style="font-family: 'Times New Roman', Times, serif; color: aliceblue;">School Manegement</h2>
+ <p style="color:lightslategray">This websites soley for admins.</p>
+ <p style="color:lightslategray; padding-right: 70px; padding-bottom: 10px; padding-left: 70px;">Access to this page is restricted to authorized users only. Unauthorized or excessive access attempts could be 
+    subject to legal accountability. Kindly be informed that all user activities are recorded and monitored by the 
+    system. In case of any suspected unauthorized use or malicious activity, the user may be subjected for legal 
+    actions.</p>
+
+  <p style="color:lightslategray">However, if you consider this as a legitimate request, kindly contact IT Helpdesk</p>
+</div>
+<div class="alert a">
+   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+   <strong style="text-align: center;">WARNING!</strong> Access to this page is restricted to authorized users only.
+ </div>
+
+ <footer>
+  <div class="footer">
+    <ul style="list-style-type: none;">
+       <li  style="display: inline; margin: 30px;">
+         <a routerLink="/teacher" rounterLinkActive="active">Teachers <span class="sr-only">(current)</span></a>
+      </li>
+ 
+      <li  style="display: inline; margin: 30px;">
+         <a routerLink="/student" rounterLinkActive="active">Students<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+ </div>
+ </footer>
+ <router-outlet>
+  <!--Routed Views go here-->
 
 
 
