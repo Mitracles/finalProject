@@ -1,4 +1,4 @@
-    <h2 style="border: 10; text-align: center; color: aqua; font-family: 'Times New Roman', Times, serif;">List of Teachers</h2>
+  <h2 style="border: 10; text-align: center; color: aqua; font-family: 'Times New Roman', Times, serif;">List of Teachers</h2>
     <div class="container" id="main-container" style="background-color:rgb(64, 65, 24);">
   <div class="row" style="font-family: 'Times New Roman', Times, serif;">
     <div *ngFor="let teacher of teachers" class="col-md-6 col-xl-3">
@@ -29,6 +29,7 @@
    </form>
     <button style="background-color: #4b1f14;" class="nav-link" (click)="onOpenTeacherModal(null, 'add')"><h2 style="color: green;">𝓐𝓭𝓭 𝓣𝓮𝓪𝓬𝓱𝓮𝓻𝓼</h2><span class="sr-only">(current)</span></button>
   </div>
+
 
 <!-- Add Teacher Modal -->
 <div class="modal fade" id="addTeacherModal" tabindex="-1" role="dialog" aria-labelledby="addTeacherModalLabel" aria-hidden="true">
