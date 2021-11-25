@@ -1,8 +1,60 @@
-  <h2 style="border: 10; text-align: center; color: aqua; font-family: 'Times New Roman', Times, serif;">List of Teachers</h2>
-    <div class="container" id="main-container" style="background-color:rgb(64, 65, 24);">
+<style>
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
+
+.alert {
+  padding: 20px;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+.button {
+   border: none;
+   padding: 0px;
+   text-align: center;
+   vertical-align:middle;
+   width: 84.7%;
+   margin-left: 7.7%;
+
+}
+
+.button:hover {
+   background-color: lightslategray;
+   color: black;
+}
+
+
+body{
+   background-color:white;
+}
+
+</style>
+<body>
+<h2 style="text-align: center; color: black; font-family: 'Times New Roman', Times, serif; padding-top: 30px;">List of Teachers</h2>
+<div>
+<button class="button" (click)="onOpenTeacherModal(null, 'add')">
+   <p style="font-family: Lucida Handwriting, cursive; font-size: 10px; font-size: large; ">Add Teachers</p><span class="sr-only">(current)</span>
+</button> 
+</div>   
+<div class="container" id="main-container" style="background-color:rgb(64, 65, 24);">
   <div class="row" style="font-family: 'Times New Roman', Times, serif;">
     <div *ngFor="let teacher of teachers" class="col-md-6 col-xl-3">
-       <div class="card m-b-30">
+       <div class="card m-b-30" style="padding-top: 20px;">
           <div class="card-body row">
              <div class="col-6">
                 <a href=""><img src="{{teacher?.teacherimageUrl}}" alt="" class="img-fluid rounded-circle w-60"></a>
@@ -27,9 +79,8 @@
       <input type="search" (ngModelChange)="searchTeachers(key.value)" #key="ngModel" ngModel 
        name="key" id="searchName" class="form-control mr-sm-4" placeholder="Search teachers..." required>
    </form>
-    <button style="background-color: #4b1f14;" class="nav-link" (click)="onOpenTeacherModal(null, 'add')"><h2 style="color: green;">𝓐𝓭𝓭 𝓣𝓮𝓪𝓬𝓱𝓮𝓻𝓼</h2><span class="sr-only">(current)</span></button>
+    
   </div>
-
 
 <!-- Add Teacher Modal -->
 <div class="modal fade" id="addTeacherModal" tabindex="-1" role="dialog" aria-labelledby="addTeacherModalLabel" aria-hidden="true">
@@ -138,3 +189,20 @@
      <p>No Teachers were found.</p>
    </div>
    </div>
+   <p>.</p>
+   <p>.</p>
+   
+   <footer>
+      <div class="footer">
+        <ul style="list-style-type: none;">
+           <li  style="display: inline; margin: 30px;">
+             <a routerLink="/teacher" rounterLinkActive="active">Teachers <span class="sr-only">(current)</span></a>
+          </li>
+     
+          <li  style="display: inline; margin: 30px;">
+             <a routerLink="/student" rounterLinkActive="active">Students<span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+     </div>
+     </footer>
+   </body>
